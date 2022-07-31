@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+  <link rel="stylesheet" href="music.css" />
+  <title>Music Player</title>
+</head>
+
+<body>
+  <audio src="" id="audio-source"></audio>
+  <!-- Home Section -->
+  <section class="home-section">
+    <!-- carousel -->
+    <div class="carousel">
+      <img src="assets/images/cover 1.png" class="active" alt="">
+      <img src="assets/images/cover 2.png" alt="">
+      <img src="assets/images/cover 3.png" alt="">
+      <img src="assets/images/cover 4.png" alt="">
+      <img src="assets/images/cover 5.png" alt="">
+    </div>
+
+    <!-- Playlist -->
+    <h1 class="heading">Recently played</h1>
+    <div class="playlists-group">
+      <div class="playlist-card">
+        <img src="assets/images/cover 9.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Top International</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 1.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Radio Hits</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 10.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Bollywood Specials</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 11.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Top 50 charts</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 5.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Punjabi Songs</p>
+      </div>
+    </div>
+    <h1 class="heading">Based on your listening</h1>
+    <div class="playlists-group">
+      <div class="playlist-card">
+        <img src="assets/images/cover 11.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Top International</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 12.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Radio Hits</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 13.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Bollywood Specials</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 1.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Top 50 charts</p>
+      </div>
+      <div class="playlist-card">
+        <img src="assets/images/cover 3.png" class="playlist-card-img" alt="">
+        <p class="playlist-card-name">Punjabi Songs</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Music Player Section -->
+  <section class="music-player-section">
+    <img src="assets/images/back.png" alt="" class="back-btn icon hide">
+    <img src="assets/images/nav.png" alt="" class="nav-btn icon hide">
+    <h1 class="current-song-name">Song 1</h1>
+    <p class="artist-name hide">Artist 1</p>
+    <img src="assets/images/cover 1.png" alt="" class="cover hide">
+    <div class="seek-bar-container">
+      <input type="range" class="music-seek-bar" value="0">
+      <p class="current-time hide">00 : 00</p>
+      <p class="duration hide">00 : 00</p>
+    </div>
+    <div class="controls">
+      <span class="fas fa-redo"></span>
+      <div class="main">
+        <i class="fas fa-backward active"></i>
+        <i class="fas fa-play active"></i>
+        <i class="fas fa-pause"></i>
+        <i class="fas fa-forward active"></i>
+      </div>
+      <input type="range" class="volume-slider" max="1" value="1" step="0.1">
+      <span class="fas fa-volume-up"></span>
+    </div>
+  </section>
+
+  <!-- Playlist -->
+  <section class="playlist">
+    <img src="assets/images/back.png" alt="" class="back-btn icon">
+    <h1 class="title">Playlist</h1>
+    <div class="queue active">
+      <div class="queue-cover">
+        <img src="assets/images/cover 1.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 1</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 2.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 2</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 3.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 3</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 4.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 4</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 5.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 5</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 6.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 6</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 7.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 7</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 8.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 8</p>
+    </div>
+    <div class="queue">
+      <div class="queue-cover">
+        <img src="assets/images/cover 9.png" alt="">
+        <i class="fas fa-pause"></i>
+      </div>
+      <p class="name">Song 9</p>
+    </div>
+  </section>
+  <script src="music.js"></script>
+  <script type="module" src="data.js"></script>
+</body>
+
+</html>
