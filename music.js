@@ -1,59 +1,7 @@
-// let songs = [
-//     {
-//         name: 'song1',
-//         path: 'assets/musics/Song 1.mp3',
-//         artist: 'Artist 1',
-//         cover: 'assets/images/cover 1.png'
-//     },
-//     {
-//         name: 'song2',
-//         path: 'assets/musics/Song 2.mp3',
-//         artist: 'Artist 2',
-//         cover: 'assets/images/cover 2.png'
-//     },
-//     {
-//         name: 'song3',
-//         path: 'assets/musics/Song 3.mp3',
-//         artist: 'Artist 3',
-//         cover: 'assets/images/cover 3.png'
-//     },
-//     {
-//         name: 'song4',
-//         path: 'assets/musics/Song 4.mp3',
-//         artist: 'Artist 4',
-//         cover: 'assets/images/cover 4.png'
-//     },
-//     {
-//         name: 'song5',
-//         path: 'assets/musics/Song 5.mp3',
-//         artist: 'Artist 5',
-//         cover: 'assets/images/cover 5.png'
-//     },
-//     {
-//         name: 'song6',
-//         path: 'assets/musics/Song 6.mp3',
-//         artist: 'Artist 6',
-//         cover: 'assets/images/cover 6.png'
-//     },
-//     {
-//         name: 'song7',
-//         path: 'assets/musics/Song 7.mp3',
-//         artist: 'Artist 7',
-//         cover: 'assets/images/cover 7.png'
-//     },
-//     {
-//         name: 'song8',
-//         path: 'assets/musics/Song 8.mp3',
-//         artist: 'Artist 8',
-//         cover: 'assets/images/cover 8.png'
-//     },
-// ]
-
-// import { data } from "autoprefixer";
-// import { songs } from './data.js'
-parse = require('node-html-parser');
+import { songs } from './data.js'
 
 // Carousels
+
 const carousel = [...document.querySelectorAll('.carousel img')]
 let carouselImageIndex = 0;
 
@@ -73,18 +21,17 @@ setInterval(() => changeCarousel(), 3000);
 // toggling music player
 
 const musicPlayerSection = document.querySelector('.music-player-section')
-// let clickCount = 1;
+let clickCount = 1;
 
-musicPlayerSection.addEventListener('dblclick', () => {
-    // musicPlayerSection.classList.add('active')
-    // if (clickCount >= 2) {
-    //     musicPlayerSection.classList.add('active');
-    //     clickCount = 1;
-    //     return;
-    // }
-    // clickCount++;
+musicPlayerSection.addEventListener('click', () => {
+    if (clickCount >= 2) {
+        musicPlayerSection.classList.add('active');
+        clickCount = 1;
+        return;
+    }
+    clickCount++;
     setTimeout(() => {
-        musicPlayerSection.classList.add('active')
+        clickCount = 1;
     }, 250);
 })
 
@@ -96,6 +43,7 @@ backToHomeBtn.addEventListener('click', () =>
     musicPlayerSection.classList.remove('active'))
 
 // Access Playlist
+
 const playlistSection = document.querySelector('.playlist');
 const navBtn = document.querySelector('.music-player-section .nav-btn');
 navBtn.addEventListener('click', () => {
@@ -110,7 +58,6 @@ backToMusicPlayer.addEventListener('click', () => {
 })
 
 //Navigations Done
-
 //Music
 
 let currentMusic = 0
@@ -122,7 +69,6 @@ const coverImage = document.querySelector('.cover');
 const currentMusicTime = document.querySelector('.current-time');
 const musicDuration = document.querySelector('.duration');
 const queue = [...document.querySelectorAll('.queue')]
-// const controls = [...document.querySelector('.controls span')]
 
 //select all buttons here
 
@@ -164,7 +110,6 @@ const setMusic = (i) => {
         seekBar.max = music.duration;
         musicDuration.innerHTML = formatTime(music.duration)
     }, 300);
-    currentMusic.innerHTML = '00 : 00'
     queue.forEach(item => {
         item.classList.remove('active')
     })
